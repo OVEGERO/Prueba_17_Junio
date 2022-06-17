@@ -1,0 +1,17 @@
+<div class="container">
+  <label>Filtro de búsqueda</label>
+  <br>
+  <select (change)="onSelect($event)">
+    <option selected></option>
+    <option >nombre</option>
+    <option>precio</option>
+    <option>direccion</option>
+  </select>
+
+  <div>
+    <ul>
+      <li *ngFor="let biene of bienes">{{biene.nombre}}, {{biene.precio}}, {{biene.direccion}}</li>
+    </ul>
+  </div>
+
+</div>
