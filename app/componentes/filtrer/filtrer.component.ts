@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { Event } from '@angular/router';
 import Bienes from 'src/app/interface/bienes.interface';
 import { BinesService } from 'src/app/services/bines.service';
 
@@ -28,13 +27,6 @@ export class FiltrerComponent implements OnInit {
     this.service.getBines().subscribe(bienes => {
       this.bienes = bienes;
     });
-    if (this.selector==1){
-      this.service.getBines().subscribe(data => {
-        this.filtrado=data.forEach((element:any) => {
-          this.filtrado=element.nombre;
-        });
-      });
-    }
   }
 
   onSelect(event: any): void {
